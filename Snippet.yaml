@@ -1,7 +1,10 @@
-secret: ''
 dns:
-  enable: true
+  enable: true # set true to enable dns (default is false)
   nameserver:
     - '192.168.50.1'     # 上级网关DNS，请根据实际设置
     - '223.5.5.5'        # 这里开始的DNS可以换成其他DNS，尽可能多设置几个，无需考虑污染
     - '114.114.114.114'
+    - 'tls://dns.rubyfish.cn:853' # dns over tls
+  fallback: # concurrent request with nameserver, fallback used when GEOIP country isn't CN
+    - tcp://1.1.1.1
+    - tcp://1.0.0.1
