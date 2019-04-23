@@ -5,6 +5,3 @@ dns:
     - '119.29.29.29'
     - '114.114.114.114'
     - 'tls://dns.rubyfish.cn:853' # dns over tls
-  fallback: # concurrent request with nameserver, fallback used when GEOIP country isn't CN
-    - tls://dns.rubyfish.cn:853
-    - tls://dns.google
