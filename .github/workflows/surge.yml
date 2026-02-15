@@ -1,4 +1,4 @@
-name: Convert Geosite to Surge Rule-Set
+name: Convert GeoSite to Surge Rule-Set
 
 on:
   workflow_dispatch:
@@ -19,8 +19,8 @@ jobs:
 
       - name: Setup Working Dirs
         run: |
-          mkdir v2rules surgerules
-          chmod 755 v2rules surgerules
+          mkdir origin_rules surge_rules
+          chmod 755 origin_rules surge_rules
       
       - name: Setup tools
         run: |
@@ -32,16 +32,21 @@ jobs:
           wget "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
 
       - name: Extract GeoSite
-        run: ./geo-linux-amd64 unpack site geosite.dat -d v2rules/
+        run: ./geo-linux-amd64 unpack site geosite.dat -d origin_rules/
 
       - name: Convert
         run: |
-          cd v2rules || exit 1
+          cd origin_rules || exit 1
           for FILE in ./*
           do 
           sed '' `grep "include:" $FILE | sed "s/include://g"` $FILE > $FILE.tmp
-          grep "domain:" $FILE.tmp | sed -e "s/domain:/DOMAIN-SUFFIX,/g" -e "s/ @.*//g" > ../surgerules/$FILE.conf
-          grep "keyword:" $FILE.tmp | sed -e "s/keyword:/DOMAIN-KEYWORD,/g" -e "s/ @.*//g" >> ../surgerules/$FILE.conf
-          grep "full:" $FILE.tmp | sed -e "s/full:/DOMAIN,/g" -e "s/ @.*//g" >> ../surgerules/$FILE.conf
+          grep "domain:" $FILE.tmp | sed -e "s/domain:/DOMAIN-SUFFIX,/g" -e "s/ @.*//g" > ../surge_rules/$FILE.conf
+          grep "keyword:" $FILE.tmp | sed -e "s/keyword:/DOMAIN-KEYWORD,/g" -e "s/ @.*//g" >> ../surge_rules/$FILE.conf
+          grep "full:" $FILE.tmp | sed -e "s/full:/DOMAIN,/g" -e "s/ @.*//g" >> ../surge_rules/$FILE.conf
           rm $FILE.tmp
           done
+
+      - name: Ready to Push
+        run: |
+          mkdir -p release/geo_site
+          cp surge_rules/* release/geo_site/
