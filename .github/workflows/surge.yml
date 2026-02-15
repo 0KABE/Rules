@@ -38,6 +38,7 @@ jobs:
       - name: Ready to Push
         run: |
           rm -rf repo/geo_ip/surge
+          mkdir -p repo/geo_ip/surge
           cp /tmp/geo_ip/* repo/geo_ip/surge
 
       - name: Push to the Remote
