@@ -34,21 +34,18 @@ jobs:
           do
             grep "/" "$FILE" | sed -e 's/$/,no-resolve/' > geo_ip_no_resolve/$(basename "$FILE")_no_resolve.list
           done
-          ls geo_ip_no_resolve
 
       - name: Ready to Push
         run: |
           rm -rf repo/geo_ip/surge
           mkdir -p repo/geo_ip/surge
           cp geo_ip_no_resolve/* repo/geo_ip/surge
-          tree .
 
       - name: Push to the Remote
         run: |
-          tree repo
           cd repo || exit 1
           git add .
-          git diff --quiet && echo "No changes" && exit 0
+          git diff --cached --quiet && echo "No changes" && exit 0
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Released geo_ip on $(date)"
