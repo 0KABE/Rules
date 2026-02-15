@@ -90,7 +90,7 @@ jobs:
 
       - name: Ready to Push
         run: |
-          rm -rf repo/*
+          rm -rf repo/geo_site/*
           mkdir -p repo/geo_site/surge
           cp surge_rules/* repo/geo_site/surge
 
