@@ -1,7 +1,0 @@
-dns:
-  enable: true # set true to enable dns (default is false)
-  nameserver:
-    - '223.5.5.5'        # 这里开始的DNS可以换成其他DNS，尽可能多设置几个，无需考虑污染
-    - '119.29.29.29'
-    - '114.114.114.114'
-    - 'tls://dns.rubyfish.cn:853' # dns over tls
