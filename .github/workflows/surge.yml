@@ -34,6 +34,7 @@ jobs:
           do
             grep "/" "$FILE" | sed -e 's/$/,no-resolve/' > /tmp/geo_ip/$(basename "$FILE")_no_resolve.list
           done
+          ls /tmp/geo_ip
 
       - name: Ready to Push
         run: |
