@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Setup Working Dirs
         run: |
@@ -50,3 +50,13 @@ jobs:
         run: |
           mkdir -p release/geo_site
           cp surge_rules/* release/geo_site/
+
+      - run: |
+          cd release || exit 1
+          git init
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b release
+          git add .
+          git commit -m "Released on $(date)"
+          git push -f -u origin release
