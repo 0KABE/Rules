@@ -42,6 +42,7 @@ jobs:
           mkdir -p repo/geo_ip/surge
           ls geo_ip_no_resolve
           cp geo_ip_no_resolve/* repo/geo_ip/surge
+          ls repo/geo_ip/surge
 
       - name: Push to the Remote
         run: |
