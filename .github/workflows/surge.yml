@@ -40,12 +40,12 @@ jobs:
         run: |
           rm -rf repo/geo_ip/surge
           mkdir -p repo/geo_ip/surge
-          ls geo_ip_no_resolve
           cp geo_ip_no_resolve/* repo/geo_ip/surge
-          ls repo/geo_ip/surge
+          tree .
 
       - name: Push to the Remote
         run: |
+          tree repo
           cd repo || exit 1
           git diff --quiet && echo "No changes" && exit 0
           git add .
