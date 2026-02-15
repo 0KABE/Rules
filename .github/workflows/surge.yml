@@ -45,6 +45,7 @@ jobs:
 
       - name: Push to the Remote
         run: |
+          tree repo
           cd repo || exit 1
           git add .
           git diff --quiet && echo "No changes" && exit 0
