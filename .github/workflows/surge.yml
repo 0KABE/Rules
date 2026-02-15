@@ -53,7 +53,6 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v6
         with:
@@ -98,8 +97,8 @@ jobs:
       - name: Push to the Remote
         run: |
           cd repo || exit 1
-          git diff --quiet && echo "No changes" && exit 0
           git add .
+          git diff --cached --quiet && echo "No changes" && exit 0
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Released on $(date)"
