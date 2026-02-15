@@ -11,6 +11,44 @@ on:
       - "**/README.md"
 
 jobs:
+  geo_ip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          ref: release
+          path: repo
+
+      - name: Checkout GEOIP
+        uses: actions/checkout@v6
+        with:
+          repository: 'Loyalsoldier/geoip'
+          ref: release
+          path: Loyalsoldier/geoip
+
+      - name: Add No Resolve
+        run: |
+          mkdir -p /tmp/geoip
+          for FILE in Loyalsoldier/geoip/surge/*
+          do
+            grep "/" "$FILE" | sed -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' > /tmp/geo_ip/$(basename "$FILE")_no_resolve.list
+          done
+      - name: Ready to Push
+        run: |
+          rm -rf repo/geo_ip/surge
+          cp /tmp/geoip/* repo/geo_ip/surge
+
+      - name: Push to the Remote
+        run: |
+          cd repo || exit 1
+          git diff --quiet && echo "No changes" && exit 0
+          git add .
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Released geo_ip on $(date)"
+          git push -f -u origin release
+
   build:
     runs-on: ubuntu-latest
 
