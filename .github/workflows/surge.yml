@@ -40,6 +40,7 @@ jobs:
         run: |
           rm -rf repo/geo_ip/surge
           mkdir -p repo/geo_ip/surge
+          ls /tmp/geo_ip
           cp /tmp/geo_ip/* repo/geo_ip/surge
 
       - name: Push to the Remote
