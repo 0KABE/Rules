@@ -43,9 +43,9 @@ jobs:
           for FILE in ./*
           do 
           sed '' `grep "include:" $FILE | sed "s/include://g"` $FILE > $FILE.tmp
-          grep "domain:" $FILE.tmp | sed -e "s/domain:/DOMAIN-SUFFIX,/g" -e "s/ @.*//g" > ../surge_rules/$FILE.conf
-          grep "keyword:" $FILE.tmp | sed -e "s/keyword:/DOMAIN-KEYWORD,/g" -e "s/ @.*//g" >> ../surge_rules/$FILE.conf
-          grep "full:" $FILE.tmp | sed -e "s/full:/DOMAIN,/g" -e "s/ @.*//g" >> ../surge_rules/$FILE.conf
+          grep "domain:" $FILE.tmp | sed -e "s/domain:/DOMAIN-SUFFIX,/g" -e "s/ @.*//g" > ../surge_rules/$FILE.list
+          grep "keyword:" $FILE.tmp | sed -e "s/keyword:/DOMAIN-KEYWORD,/g" -e "s/ @.*//g" >> ../surge_rules/$FILE.list
+          grep "full:" $FILE.tmp | sed -e "s/full:/DOMAIN,/g" -e "s/ @.*//g" >> ../surge_rules/$FILE.list
           rm $FILE.tmp
           done
 
