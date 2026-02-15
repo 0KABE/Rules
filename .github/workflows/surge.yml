@@ -32,7 +32,7 @@ jobs:
           mkdir -p geo_ip_no_resolve
           for FILE in Loyalsoldier/geoip/surge/*
           do
-            grep "/" "$FILE" | sed -e 's/$/,no-resolve/' > geo_ip_no_resolve/$(basename "$FILE")_no_resolve.list
+            grep "/" "$FILE" | sed -e 's/$/,no-resolve/' > geo_ip_no_resolve/$(basename "$FILE" .txt)_no_resolve.list
           done
 
       - name: Ready to Push
