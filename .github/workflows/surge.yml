@@ -29,15 +29,16 @@ jobs:
 
       - name: Add No Resolve
         run: |
-          mkdir -p /tmp/geoip
+          mkdir -p /tmp/geo_ip
           for FILE in Loyalsoldier/geoip/surge/*
           do
             grep "/" "$FILE" | sed -e 's/^/IP-CIDR,/' -e 's/$/,no-resolve/' > /tmp/geo_ip/$(basename "$FILE")_no_resolve.list
           done
+
       - name: Ready to Push
         run: |
           rm -rf repo/geo_ip/surge
-          cp /tmp/geoip/* repo/geo_ip/surge
+          cp /tmp/geo_ip/* repo/geo_ip/surge
 
       - name: Push to the Remote
         run: |
