@@ -52,56 +52,56 @@ jobs:
           git commit -m "Released geo_ip on $(date)"
           git push -f -u origin release
 
-  build:
-    runs-on: ubuntu-latest
+  # build:
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          ref: release
-          path: repo
+  #   steps:
+  #     - uses: actions/checkout@v6
+  #       with:
+  #         ref: release
+  #         path: repo
 
-      - name: Setup Working Dirs
-        run: |
-          mkdir origin_rules surge_rules
-          chmod 755 origin_rules surge_rules
+  #     - name: Setup Working Dirs
+  #       run: |
+  #         mkdir origin_rules surge_rules
+  #         chmod 755 origin_rules surge_rules
       
-      - name: Setup tools
-        run: |
-          wget "https://github.com/MetaCubeX/geo/releases/download/v1.1/geo-linux-amd64"
-          chmod +x geo-linux-amd64
+  #     - name: Setup tools
+  #       run: |
+  #         wget "https://github.com/MetaCubeX/geo/releases/download/v1.1/geo-linux-amd64"
+  #         chmod +x geo-linux-amd64
       
-      - name: Download GeoSite
-        run: |
-          wget "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
+  #     - name: Download GeoSite
+  #       run: |
+  #         wget "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
 
-      - name: Extract GeoSite
-        run: ./geo-linux-amd64 unpack site geosite.dat -d origin_rules/
+  #     - name: Extract GeoSite
+  #       run: ./geo-linux-amd64 unpack site geosite.dat -d origin_rules/
 
-      - name: Convert
-        run: |
-          cd origin_rules || exit 1
-          for FILE in ./*
-          do 
-          sed '' `grep "include:" $FILE | sed "s/include://g"` $FILE > $FILE.tmp
-          grep "domain:" $FILE.tmp | sed -e "s/domain:/DOMAIN-SUFFIX,/g" -e "s/ @.*//g" > ../surge_rules/$FILE.list
-          grep "keyword:" $FILE.tmp | sed -e "s/keyword:/DOMAIN-KEYWORD,/g" -e "s/ @.*//g" >> ../surge_rules/$FILE.list
-          grep "full:" $FILE.tmp | sed -e "s/full:/DOMAIN,/g" -e "s/ @.*//g" >> ../surge_rules/$FILE.list
-          rm $FILE.tmp
-          done
+  #     - name: Convert
+  #       run: |
+  #         cd origin_rules || exit 1
+  #         for FILE in ./*
+  #         do 
+  #         sed '' `grep "include:" $FILE | sed "s/include://g"` $FILE > $FILE.tmp
+  #         grep "domain:" $FILE.tmp | sed -e "s/domain:/DOMAIN-SUFFIX,/g" -e "s/ @.*//g" > ../surge_rules/$FILE.list
+  #         grep "keyword:" $FILE.tmp | sed -e "s/keyword:/DOMAIN-KEYWORD,/g" -e "s/ @.*//g" >> ../surge_rules/$FILE.list
+  #         grep "full:" $FILE.tmp | sed -e "s/full:/DOMAIN,/g" -e "s/ @.*//g" >> ../surge_rules/$FILE.list
+  #         rm $FILE.tmp
+  #         done
 
-      - name: Ready to Push
-        run: |
-          rm -rf repo/*
-          mkdir -p repo/geo_site/surge
-          cp surge_rules/* repo/geo_site/surge
+  #     - name: Ready to Push
+  #       run: |
+  #         rm -rf repo/*
+  #         mkdir -p repo/geo_site/surge
+  #         cp surge_rules/* repo/geo_site/surge
 
-      - name: Push to the Remote
-        run: |
-          cd repo || exit 1
-          git diff --quiet && echo "No changes" && exit 0
-          git add .
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Released on $(date)"
-          git push -f -u origin release
+  #     - name: Push to the Remote
+  #       run: |
+  #         cd repo || exit 1
+  #         git diff --quiet && echo "No changes" && exit 0
+  #         git add .
+  #         git config user.name "github-actions[bot]"
+  #         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+  #         git commit -m "Released on $(date)"
+  #         git push -f -u origin release
