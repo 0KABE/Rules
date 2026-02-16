@@ -1,4 +1,4 @@
-name: Convert GeoSite to Surge Rule-Set
+name: Convert Rules to Surge Rule-Set
 
 on:
   workflow_dispatch:
@@ -10,96 +10,79 @@ on:
     paths-ignore:
       - "**/README.md"
 
+permissions:
+  contents: write
+
 jobs:
-  geo_ip:
+  update-rules:
+    name: Generate and Deploy Rules
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
+      - name: Checkout release branch
+        uses: actions/checkout@v4
         with:
           ref: release
-          path: repo
+          path: release-repo
 
-      - name: Checkout GEOIP
-        uses: actions/checkout@v6
+      - name: Checkout GeoIP source
+        uses: actions/checkout@v4
         with:
-          repository: 'Loyalsoldier/geoip'
+          repository: Loyalsoldier/geoip
           ref: release
-          path: Loyalsoldier/geoip
+          path: geoip-src
 
-      - name: Add No Resolve
+      - name: Setup Tools and GeoSite
         run: |
-          mkdir -p geo_ip_no_resolve
-          for FILE in Loyalsoldier/geoip/surge/*
-          do
-            grep "/" "$FILE" | sed -e 's/$/,no-resolve/' > geo_ip_no_resolve/$(basename "$FILE" .txt)_no_resolve.list
+          wget -q https://github.com/MetaCubeX/geo/releases/download/v1.1/geo-linux-amd64 -O geo-tool
+          chmod +x geo-tool
+          wget -q https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
+
+      - name: Process GeoIP Rules
+        run: |
+          TARGET_DIR="release-repo/geo_ip/surge"
+          mkdir -p "$TARGET_DIR"
+          rm -f "$TARGET_DIR"/*.list
+          
+          for file in geoip-src/surge/*.txt; do
+            filename=$(basename "$file" .txt)
+            # Filter for IP rules (containing "/") and append no-resolve
+            grep "/" "$file" | sed 's/$/,no-resolve/' > "$TARGET_DIR/${filename}_no_resolve.list"
           done
 
-      - name: Ready to Push
+      - name: Process GeoSite Rules
         run: |
-          rm -rf repo/geo_ip/surge
-          mkdir -p repo/geo_ip/surge
-          cp geo_ip_no_resolve/* repo/geo_ip/surge
-
-      - name: Push to the Remote
-        run: |
-          cd repo || exit 1
-          git add .
-          git diff --cached --quiet && echo "No changes" && exit 0
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Released geo_ip on $(date)"
-          git push -f -u origin release
-
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-        with:
-          ref: release
-          path: repo
-
-      - name: Setup Working Dirs
-        run: |
-          mkdir origin_rules surge_rules
-          chmod 755 origin_rules surge_rules
-      
-      - name: Setup tools
-        run: |
-          wget "https://github.com/MetaCubeX/geo/releases/download/v1.1/geo-linux-amd64"
-          chmod +x geo-linux-amd64
-      
-      - name: Download GeoSite
-        run: |
-          wget "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
-
-      - name: Extract GeoSite
-        run: ./geo-linux-amd64 unpack site geosite.dat -d origin_rules/
-
-      - name: Convert
-        run: |
-          cd origin_rules || exit 1
-          for FILE in ./*
-          do 
-          sed '' `grep "include:" $FILE | sed "s/include://g"` $FILE > $FILE.tmp
-          grep "domain:" $FILE.tmp | sed -e "s/domain:/DOMAIN-SUFFIX,/g" -e "s/ @.*//g" > ../surge_rules/$FILE.list
-          grep "keyword:" $FILE.tmp | sed -e "s/keyword:/DOMAIN-KEYWORD,/g" -e "s/ @.*//g" >> ../surge_rules/$FILE.list
-          grep "full:" $FILE.tmp | sed -e "s/full:/DOMAIN,/g" -e "s/ @.*//g" >> ../surge_rules/$FILE.list
-          rm $FILE.tmp
+          # Unpack GeoSite
+          mkdir -p raw-geosite
+          ./geo-tool unpack site geosite.dat -d raw-geosite/
+          
+          TARGET_DIR="release-repo/geo_site/surge"
+          mkdir -p "$TARGET_DIR"
+          rm -rf "release-repo/geo_site/"*
+          mkdir -p "$TARGET_DIR"
+          
+          cd raw-geosite
+          for file in *; do
+            # Concatenate included files if they exist
+            includes=$(grep "include:" "$file" | sed "s/include://g")
+            # shellcheck disable=SC2086
+            sed '' $includes "$file" > "$file.tmp" 2>/dev/null || cat "$file" > "$file.tmp"
+            
+            # Convert to Surge format
+            grep "domain:" "$file.tmp" | sed -e "s/domain:/DOMAIN-SUFFIX,/g" -e "s/ @.*//g" > "../$TARGET_DIR/$file.list"
+            grep "keyword:" "$file.tmp" | sed -e "s/keyword:/DOMAIN-KEYWORD,/g" -e "s/ @.*//g" >> "../$TARGET_DIR/$file.list"
+            grep "full:" "$file.tmp" | sed -e "s/full:/DOMAIN,/g" -e "s/ @.*//g" >> "../$TARGET_DIR/$file.list"
+            rm "$file.tmp"
           done
 
-      - name: Ready to Push
+      - name: Deploy to Release Branch
         run: |
-          rm -rf repo/geo_site/*
-          mkdir -p repo/geo_site/surge
-          cp surge_rules/* repo/geo_site/surge
-
-      - name: Push to the Remote
-        run: |
-          cd repo || exit 1
-          git add .
-          git diff --cached --quiet && echo "No changes" && exit 0
+          cd release-repo
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Released on $(date)"
-          git push -f -u origin release
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to deploy."
+          else
+            git commit -m "Update rules: $(date -u +'%Y-%m-%d %H:%M:%S') UTC"
+            git push origin release
+          fi
