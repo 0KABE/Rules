@@ -45,8 +45,7 @@ jobs:
           
           for file in geoip-src/surge/*.txt; do
             filename=$(basename "$file" .txt)
-            # Filter for IP rules (containing "/") and append no-resolve
-            grep "/" "$file" | sed 's/$/,no-resolve/' > "$TARGET_DIR/${filename}_no_resolve.list"
+            cp $file "$TARGET_DIR/${filename}.list"
           done
 
       - name: Process GeoSite Rules
