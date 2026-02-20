@@ -4,6 +4,7 @@ DOMAIN-SUFFIX,2025copy.com
 DOMAIN-SUFFIX,20thcenturystudios.com.au
 DOMAIN-SUFFIX,20thcenturystudios.com.br
 DOMAIN-SUFFIX,20thcenturystudios.jp
+DOMAIN-SUFFIX,24h.tv
 DOMAIN-SUFFIX,2k.com
 DOMAIN-SUFFIX,2kcoretech.online
 DOMAIN-SUFFIX,2kct.onl
@@ -56,6 +57,7 @@ DOMAIN-SUFFIX,amebame.com
 DOMAIN-SUFFIX,amebaownd.com
 DOMAIN-SUFFIX,amebaowndme.com
 DOMAIN-SUFFIX,ameblo.jp
+DOMAIN-SUFFIX,amediateka.ru
 DOMAIN-SUFFIX,amiibo.com
 DOMAIN-SUFFIX,amp-api.podcast.apple.com
 DOMAIN-SUFFIX,analytics.tiktok.com
@@ -164,6 +166,7 @@ DOMAIN-SUFFIX,capitalgames.com
 DOMAIN-SUFFIX,capturingreality.com
 DOMAIN-SUFFIX,castro.fm
 DOMAIN-SUFFIX,catchplay.com
+DOMAIN-SUFFIX,cdnvideo.ru
 DOMAIN-SUFFIX,cf-vanguard.com
 DOMAIN-SUFFIX,championshipseriesleague.com
 DOMAIN-SUFFIX,charlotte-anime.jp
@@ -638,6 +641,7 @@ DOMAIN-SUFFIX,internationalsaimoe.com
 DOMAIN-SUFFIX,iole.tv
 DOMAIN-SUFFIX,itch.io
 DOMAIN-SUFFIX,itch.zone
+DOMAIN-SUFFIX,ivi.ru
 DOMAIN-SUFFIX,iyf.tv
 DOMAIN-SUFFIX,joinmaidez.com
 DOMAIN-SUFFIX,joinsquad.com
@@ -649,6 +653,9 @@ DOMAIN-SUFFIX,kamisama-maeda-lab.com
 DOMAIN-SUFFIX,kfs.io
 DOMAIN-SUFFIX,kingkong.com.tw
 DOMAIN-SUFFIX,kingkongapp.com
+DOMAIN-SUFFIX,kinopoisk-ru.clstorage.net
+DOMAIN-SUFFIX,kinopoisk.ru
+DOMAIN-SUFFIX,kinorium.com
 DOMAIN-SUFFIX,kirbysepicyarn.com
 DOMAIN-SUFFIX,kirbysuperstarultra.com
 DOMAIN-SUFFIX,kk.stream
@@ -737,6 +744,7 @@ DOMAIN-SUFFIX,maxis.com
 DOMAIN-SUFFIX,media-imdb.com
 DOMAIN-SUFFIX,mediaclip.jp
 DOMAIN-SUFFIX,megaphone.fm
+DOMAIN-SUFFIX,megogo.net
 DOMAIN-SUFFIX,metacritic.com
 DOMAIN-SUFFIX,mgo-images.com
 DOMAIN-SUFFIX,mgo.com
@@ -838,7 +846,6 @@ DOMAIN-SUFFIX,nflxsearch.net
 DOMAIN-SUFFIX,nflxso.net
 DOMAIN-SUFFIX,nflxvideo.net
 DOMAIN-SUFFIX,nfsworld.com
-DOMAIN-SUFFIX,ngenix.net
 DOMAIN-SUFFIX,ngeo.com
 DOMAIN-SUFFIX,nico
 DOMAIN-SUFFIX,nicodic.jp
@@ -996,6 +1003,7 @@ DOMAIN-SUFFIX,pokemonultrasunmoon.com
 DOMAIN-SUFFIX,pokemonvgc.com
 DOMAIN-SUFFIX,pokemonwifi.net
 DOMAIN-SUFFIX,popcap.com
+DOMAIN-SUFFIX,premier.one
 DOMAIN-SUFFIX,priconne-redive.jp
 DOMAIN-SUFFIX,prime-video.com
 DOMAIN-SUFFIX,primevideo.cc
@@ -1129,6 +1137,7 @@ DOMAIN-SUFFIX,sketchfab.com
 DOMAIN-SUFFIX,sling.com
 DOMAIN-SUFFIX,slinginternational.com
 DOMAIN-SUFFIX,smartstream.ne.jp
+DOMAIN-SUFFIX,smotreshka.tv
 DOMAIN-SUFFIX,sndcdn.com
 DOMAIN-SUFFIX,snk-corp.co.jp
 DOMAIN-SUFFIX,snk-corp.info
@@ -1178,6 +1187,7 @@ DOMAIN-SUFFIX,starfox.com
 DOMAIN-SUFFIX,stargazer-games.com
 DOMAIN-SUFFIX,starott.com
 DOMAIN-SUFFIX,starplus.com
+DOMAIN-SUFFIX,start.ru
 DOMAIN-SUFFIX,starwars.com
 DOMAIN-SUFFIX,starwarsbattlefront.com
 DOMAIN-SUFFIX,starwarsbattlefront2.com
@@ -1290,6 +1300,7 @@ DOMAIN-SUFFIX,tnt-ea.com
 DOMAIN-SUFFIX,tospotify.com
 DOMAIN-SUFFIX,toy-people.com
 DOMAIN-SUFFIX,tra-ww000-cp.akamaized.net
+DOMAIN-SUFFIX,trbcdn.net
 DOMAIN-SUFFIX,triokini.com
 DOMAIN-SUFFIX,ttlivecdn.com
 DOMAIN-SUFFIX,ttoverseaus.net
@@ -1299,6 +1310,7 @@ DOMAIN-SUFFIX,tv.apple.com
 DOMAIN-SUFFIX,tvb.com
 DOMAIN-SUFFIX,tver.co.jp
 DOMAIN-SUFFIX,tver.jp
+DOMAIN-SUFFIX,tvigle.ru
 DOMAIN-SUFFIX,twinmotion.com
 DOMAIN-SUFFIX,twitch.tv
 DOMAIN-SUFFIX,twitchcdn.net
@@ -1326,6 +1338,7 @@ DOMAIN-SUFFIX,vhxqa3.com
 DOMAIN-SUFFIX,vhxqa4.com
 DOMAIN-SUFFIX,vhxqa6.com
 DOMAIN-SUFFIX,vigorgame.com
+DOMAIN-SUFFIX,viju.ru
 DOMAIN-SUFFIX,vimeo-staging.com
 DOMAIN-SUFFIX,vimeo-staging2.com
 DOMAIN-SUFFIX,vimeo.com
