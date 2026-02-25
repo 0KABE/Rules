@@ -326,6 +326,7 @@ DOMAIN-SUFFIX,openwrt.org
 DOMAIN-SUFFIX,osdn.net
 DOMAIN-SUFFIX,ospray.net
 DOMAIN-SUFFIX,ospray.org
+DOMAIN-SUFFIX,packagecloud.io
 DOMAIN-SUFFIX,packagist.org
 DOMAIN-SUFFIX,packer.io
 DOMAIN-SUFFIX,parse.com
