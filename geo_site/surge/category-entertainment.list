@@ -334,6 +334,7 @@ DOMAIN-SUFFIX,disneytvajobs.com
 DOMAIN-SUFFIX,disneyworld-go.com
 DOMAIN-SUFFIX,dkr.com
 DOMAIN-SUFFIX,dl.steam.clngaa.com
+DOMAIN-SUFFIX,dlaf.jp
 DOMAIN-SUFFIX,dlsite.com
 DOMAIN-SUFFIX,dlsite.com.tw
 DOMAIN-SUFFIX,dlsite.jp
@@ -626,8 +627,6 @@ DOMAIN-SUFFIX,hyprsense.com
 DOMAIN-SUFFIX,igcc.jp
 DOMAIN-SUFFIX,ign.com
 DOMAIN-SUFFIX,ignimg.com
-DOMAIN-SUFFIX,illusion.co.jp
-DOMAIN-SUFFIX,illusion.jp
 DOMAIN-SUFFIX,imageworks.com
 DOMAIN-SUFFIX,imdb
 DOMAIN-SUFFIX,imdb.com
@@ -1302,6 +1301,7 @@ DOMAIN-SUFFIX,toy-people.com
 DOMAIN-SUFFIX,tra-ww000-cp.akamaized.net
 DOMAIN-SUFFIX,trbcdn.net
 DOMAIN-SUFFIX,triokini.com
+DOMAIN-SUFFIX,ttcdn-us.com
 DOMAIN-SUFFIX,ttlivecdn.com
 DOMAIN-SUFFIX,ttoverseaus.net
 DOMAIN-SUFFIX,ttvnw.net
