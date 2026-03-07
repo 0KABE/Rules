@@ -2020,7 +2020,6 @@ DOMAIN-SUFFIX,cozydrdrebeats.com
 DOMAIN-SUFFIX,cpedge.com
 DOMAIN-SUFFIX,cqcorea.com
 DOMAIN-SUFFIX,crankplayer.com
-DOMAIN-SUFFIX,crates.io
 DOMAIN-SUFFIX,createspace.com
 DOMAIN-SUFFIX,createwhatsnext.com
 DOMAIN-SUFFIX,creativecloud.com
@@ -2378,7 +2377,6 @@ DOMAIN-SUFFIX,doceapower.com
 DOMAIN-SUFFIX,dockerizer.com
 DOMAIN-SUFFIX,docs.com
 DOMAIN-SUFFIX,docs.new
-DOMAIN-SUFFIX,docs.rs
 DOMAIN-SUFFIX,documentforce.com
 DOMAIN-SUFFIX,dodv.com
 DOMAIN-SUFFIX,dollarfotoclub.com
@@ -5519,9 +5517,7 @@ DOMAIN-SUFFIX,rostaxi.org
 DOMAIN-SUFFIX,route53.cn
 DOMAIN-SUFFIX,routerboard.com
 DOMAIN-SUFFIX,run.app
-DOMAIN-SUFFIX,rust-lang.org
 DOMAIN-SUFFIX,rustdesk.com
-DOMAIN-SUFFIX,rustup.rs
 DOMAIN-SUFFIX,rzr.to
 DOMAIN-SUFFIX,s-bluemix.net
 DOMAIN-SUFFIX,s-cashonmobile.com
@@ -6678,6 +6674,8 @@ DOMAIN-SUFFIX,yimg.jp
 DOMAIN-SUFFIX,ymail.com
 DOMAIN-SUFFIX,yogalayout.com
 DOMAIN-SUFFIX,yopornshop.com
+DOMAIN-SUFFIX,youla.io
+DOMAIN-SUFFIX,youla.ru
 DOMAIN-SUFFIX,youporn.com
 DOMAIN-SUFFIX,youporngay.com
 DOMAIN-SUFFIX,youpornpremium.com
@@ -7562,6 +7560,8 @@ DOMAIN,speedysub.music.apple.com
 DOMAIN,ssl-google-analytics.l.google.com
 DOMAIN,ssl.gstatic.com
 DOMAIN,sslredirect.corp.google.com
+DOMAIN,st-ok-pts.cdn-vk.ru
+DOMAIN,st-ok.cdn-vk.ru
 DOMAIN,staging-controlbe.floonet.goog
 DOMAIN,staging-databe.floonet.goog
 DOMAIN,staging.databe.floonet.goog
@@ -7759,4 +7759,5 @@ DOMAIN,www.support.apple.com
 DOMAIN,xn--flw351e.com
 DOMAIN,xp.apple.com
 DOMAIN,yandex-pogoda.static-storage.net
+DOMAIN,youla-web-static.mrgcdn.ru
 DOMAIN,yt3.googleusercontent.com
