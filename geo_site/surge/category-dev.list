@@ -47,7 +47,6 @@ DOMAIN-SUFFIX,calendarserver.org
 DOMAIN-SUFFIX,canonical.com
 DOMAIN-SUFFIX,carekit.org
 DOMAIN-SUFFIX,cdn.jetbrains.com
-DOMAIN-SUFFIX,cdnjs.com
 DOMAIN-SUFFIX,centos.org
 DOMAIN-SUFFIX,chocolatey.org
 DOMAIN-SUFFIX,clearlinux.org
@@ -98,7 +97,6 @@ DOMAIN-SUFFIX,elrepo.org
 DOMAIN-SUFFIX,embed.ly
 DOMAIN-SUFFIX,embedly.com
 DOMAIN-SUFFIX,erlang.org
-DOMAIN-SUFFIX,esm.run
 DOMAIN-SUFFIX,f8.com
 DOMAIN-SUFFIX,facebookappcenter.info
 DOMAIN-SUFFIX,facebookappcenter.net
@@ -228,8 +226,6 @@ DOMAIN-SUFFIX,jquery.com
 DOMAIN-SUFFIX,jquerymobile.com
 DOMAIN-SUFFIX,jqueryui.com
 DOMAIN-SUFFIX,js.org
-DOMAIN-SUFFIX,jsdelivr.com
-DOMAIN-SUFFIX,jsdelivr.net
 DOMAIN-SUFFIX,jupyter.org
 DOMAIN-SUFFIX,jwt.ms
 DOMAIN-SUFFIX,k8s.io
@@ -500,7 +496,6 @@ DOMAIN,appleworldwidedeveloper.sc.omtrdc.net
 DOMAIN,az764295.vo.msecnd.net
 DOMAIN,bingsettingssearch.trafficmanager.net
 DOMAIN,cdn.ampproject.org
-DOMAIN,cdn.jsdelivr.net
 DOMAIN,d29vzk4ow07wi7.cloudfront.net
 DOMAIN,default.exp-tas.com
 DOMAIN,developer.microsoft.com
