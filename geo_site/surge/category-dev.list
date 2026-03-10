@@ -66,6 +66,7 @@ DOMAIN-SUFFIX,copilot-telemetry.githubusercontent.com
 DOMAIN-SUFFIX,cpan.org
 DOMAIN-SUFFIX,crates.io
 DOMAIN-SUFFIX,cups.org
+DOMAIN-SUFFIX,cve.org
 DOMAIN-SUFFIX,cygwin.com
 DOMAIN-SUFFIX,cython.org
 DOMAIN-SUFFIX,dart.dev
