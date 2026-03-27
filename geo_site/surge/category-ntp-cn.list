@@ -2,6 +2,7 @@ DOMAIN-SUFFIX,cn.pool.ntp.org
 DOMAIN-SUFFIX,ntp.neu.edu.cn
 DOMAIN-SUFFIX,ntp.ntsc.ac.cn
 DOMAIN-SUFFIX,ntp.org.cn
+DOMAIN,izattime.qcomgeo2.com
 DOMAIN,ntp.aliyun.com
 DOMAIN,ntp.tencent.com
 DOMAIN,ntp1.aliyun.com
@@ -19,3 +20,4 @@ DOMAIN,ntp7.aliyun.com
 DOMAIN,time.amazonaws.cn
 DOMAIN,time.izatcloud.net
 DOMAIN,time.xtracloud.net
+DOMAIN,xtratime.qcomgeo2.com
