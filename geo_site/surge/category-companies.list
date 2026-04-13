@@ -480,10 +480,8 @@ DOMAIN-SUFFIX,api.carrotquest.io
 DOMAIN-SUFFIX,api.carrottrack.app
 DOMAIN-SUFFIX,api.dashly.app
 DOMAIN-SUFFIX,api.dashlytrack.app
-DOMAIN-SUFFIX,api.e.mindbox.ru
 DOMAIN-SUFFIX,api.mindbox.cloud
 DOMAIN-SUFFIX,api.mindbox.ru
-DOMAIN-SUFFIX,api.s.mindbox.ru
 DOMAIN-SUFFIX,apigee.com
 DOMAIN-SUFFIX,apihub-internal.cn
 DOMAIN-SUFFIX,apisof.net
@@ -2574,6 +2572,7 @@ DOMAIN-SUFFIX,dynamoreach.com
 DOMAIN-SUFFIX,dzen.ru
 DOMAIN-SUFFIX,dzeninfra.ru
 DOMAIN-SUFFIX,e-estate.jp
+DOMAIN-SUFFIX,e.mindbox.ru
 DOMAIN-SUFFIX,earphonescheapest.com
 DOMAIN-SUFFIX,earpod.net
 DOMAIN-SUFFIX,earthdell.com
@@ -3096,6 +3095,7 @@ DOMAIN-SUFFIX,g-tun.com
 DOMAIN-SUFFIX,g.cn
 DOMAIN-SUFFIX,g.co
 DOMAIN-SUFFIX,g.dev
+DOMAIN-SUFFIX,g.mindbox.ru
 DOMAIN-SUFFIX,g.page
 DOMAIN-SUFFIX,gacebook.com
 DOMAIN-SUFFIX,gaikaex.com
@@ -3633,6 +3633,10 @@ DOMAIN-SUFFIX,hewlettpackard.enterprises
 DOMAIN-SUFFIX,hey.boo
 DOMAIN-SUFFIX,heywire.com
 DOMAIN-SUFFIX,hf-iphone.com
+DOMAIN-SUFFIX,hh.by
+DOMAIN-SUFFIX,hh.kz
+DOMAIN-SUFFIX,hh.ru
+DOMAIN-SUFFIX,hhcdn.ru
 DOMAIN-SUFFIX,hhvm.com
 DOMAIN-SUFFIX,hifacebook.info
 DOMAIN-SUFFIX,highbolt.net
@@ -5661,6 +5665,7 @@ DOMAIN-SUFFIX,qwant.fr
 DOMAIN-SUFFIX,qwant.it
 DOMAIN-SUFFIX,qwapi.com
 DOMAIN-SUFFIX,r.bing.com
+DOMAIN-SUFFIX,rabota.by
 DOMAIN-SUFFIX,radeon.com
 DOMAIN-SUFFIX,radian6.com
 DOMAIN-SUFFIX,rapidprototyping-cadcam.com
@@ -5739,6 +5744,7 @@ DOMAIN-SUFFIX,s-msedge.net
 DOMAIN-SUFFIX,s-msft.com
 DOMAIN-SUFFIX,s-msn.com
 DOMAIN-SUFFIX,s-rewards.hk
+DOMAIN-SUFFIX,s.mindbox.ru
 DOMAIN-SUFFIX,s2stagehance.com
 DOMAIN-SUFFIX,s81c.com
 DOMAIN-SUFFIX,saffrontech.com
@@ -5840,6 +5846,7 @@ DOMAIN-SUFFIX,services-exchange.com
 DOMAIN-SUFFIX,serviceshp.com
 DOMAIN-SUFFIX,servicetalk.io
 DOMAIN-SUFFIX,serving-sys.com
+DOMAIN-SUFFIX,setka.ru
 DOMAIN-SUFFIX,sfbassets.com
 DOMAIN-SUFFIX,sfbassets.net
 DOMAIN-SUFFIX,sfdcstatic.com
@@ -6152,6 +6159,7 @@ DOMAIN-SUFFIX,tail-f.com
 DOMAIN-SUFFIX,tailf.com
 DOMAIN-SUFFIX,tailwindtraders.com
 DOMAIN-SUFFIX,takegoto.com
+DOMAIN-SUFFIX,talantix.ru
 DOMAIN-SUFFIX,tamtam.chat
 DOMAIN-SUFFIX,tandberg-china.com
 DOMAIN-SUFFIX,tandberg.com
@@ -7146,6 +7154,7 @@ DOMAIN-SUFFIX,yusercontent.com
 DOMAIN-SUFFIX,z.cn
 DOMAIN-SUFFIX,z.com
 DOMAIN-SUFFIX,zappos
+DOMAIN-SUFFIX,zarplata.ru
 DOMAIN-SUFFIX,zdxbeta.net
 DOMAIN-SUFFIX,zdxcloud.net
 DOMAIN-SUFFIX,zeibit.ai
