@@ -10,8 +10,8 @@ DOMAIN-SUFFIX,2gis.ge
 DOMAIN-SUFFIX,2gis.kg
 DOMAIN-SUFFIX,2gis.kz
 DOMAIN-SUFFIX,2gis.ru
+DOMAIN-SUFFIX,2gis.tech
 DOMAIN-SUFFIX,2gis.tj
-DOMAIN-SUFFIX,2gis.ua
 DOMAIN-SUFFIX,2gis.uz
 DOMAIN-SUFFIX,2w.ru
 DOMAIN-SUFFIX,4c.ru
@@ -55,13 +55,13 @@ DOMAIN-SUFFIX,eapteka.ru
 DOMAIN-SUFFIX,electronicsignature.ru
 DOMAIN-SUFFIX,enterly.ru
 DOMAIN-SUFFIX,era-invest.ru
-DOMAIN-SUFFIX,error-tracking.megamarket.tech
 DOMAIN-SUFFIX,etna.ai
 DOMAIN-SUFFIX,gainstech.ru
 DOMAIN-SUFFIX,gazprombank.com
 DOMAIN-SUFFIX,gazprombank.investments
 DOMAIN-SUFFIX,gazprombank.ru
 DOMAIN-SUFFIX,getsynapse.io
+DOMAIN-SUFFIX,gid.ru
 DOMAIN-SUFFIX,giga.chat
 DOMAIN-SUFFIX,gitverse.ru
 DOMAIN-SUFFIX,gosdolgi.ru
@@ -98,7 +98,6 @@ DOMAIN-SUFFIX,malotogo.ru
 DOMAIN-SUFFIX,max-tcs.ru
 DOMAIN-SUFFIX,megamarket.ru
 DOMAIN-SUFFIX,megamarket.tech
-DOMAIN-SUFFIX,metrics.21-school.ru
 DOMAIN-SUFFIX,mfk-t-finance.ru
 DOMAIN-SUFFIX,mkb.ru
 DOMAIN-SUFFIX,mtsdengi.ru
@@ -107,6 +106,7 @@ DOMAIN-SUFFIX,myapelsin.ru
 DOMAIN-SUFFIX,neon.click
 DOMAIN-SUFFIX,okko.sport
 DOMAIN-SUFFIX,okko.tv
+DOMAIN-SUFFIX,okkoapi.tv
 DOMAIN-SUFFIX,otello.ru
 DOMAIN-SUFFIX,payecom.ru
 DOMAIN-SUFFIX,payment.ru
@@ -161,7 +161,6 @@ DOMAIN-SUFFIX,sberspasibo.ru
 DOMAIN-SUFFIX,sbertech.ru
 DOMAIN-SUFFIX,sbertroika.ru
 DOMAIN-SUFFIX,sbrf.ru
-DOMAIN-SUFFIX,sentry.sberauto.com
 DOMAIN-SUFFIX,sgcheck.ru
 DOMAIN-SUFFIX,spasibo.digital
 DOMAIN-SUFFIX,spasibo.market
@@ -213,10 +212,8 @@ DOMAIN-SUFFIX,tmiaf.ru
 DOMAIN-SUFFIX,tochka-tech.com
 DOMAIN-SUFFIX,tochka.com
 DOMAIN-SUFFIX,tpension.ru
-DOMAIN-SUFFIX,tracing-http.megamarket.tech
 DOMAIN-SUFFIX,travel-tec.ru
 DOMAIN-SUFFIX,unidraw.io
-DOMAIN-SUFFIX,visor.sberbank.ru
 DOMAIN-SUFFIX,vtb.ru
 DOMAIN-SUFFIX,xn----7sbhmncai5a0arm7c1e.xn--p1ai
 DOMAIN-SUFFIX,xn----8sbkfzespdwig.xn--p1ai
@@ -230,4 +227,9 @@ DOMAIN-SUFFIX,zvuk-b2b.com
 DOMAIN-SUFFIX,zvuk.com
 DOMAIN,edu.tinkoff.ru
 DOMAIN,education.tbank.ru
+DOMAIN,error-tracking.megamarket.tech
+DOMAIN,metrics.21-school.ru
 DOMAIN,sberpro.vedomosti.ru
+DOMAIN,sentry.sberauto.com
+DOMAIN,tracing-http.megamarket.tech
+DOMAIN,visor.sberbank.ru
